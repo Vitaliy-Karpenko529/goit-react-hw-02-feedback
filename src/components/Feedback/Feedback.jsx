@@ -9,8 +9,8 @@ function Feedback({ options, onLeaveFeedback }) {
           className={s.button}
           key={option}
           name={option}
-          onClick={() => onLeaveFeedback(option)}
           type="button"
+          onClick={onLeaveFeedback}
         >
           {option}
         </button>
@@ -20,8 +20,8 @@ function Feedback({ options, onLeaveFeedback }) {
 }
 
 Feedback.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onLeaveFeedback: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string),
+  onLeaveFeedback: PropTypes.func,
 };
 
 export default Feedback;
